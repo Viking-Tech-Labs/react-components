@@ -1,27 +1,27 @@
 import React from "react";
-import Balancer from "react-wrap-balancer";
 
-import ComponentGrid from "@/components/home/component-grid";
+import { Skeleton } from "@/components/shared/skeleton/Skeleton";
+
 export default async function Home() {
   return (
     <>
-      <div className="z-10 w-full max-w-xl px-5 xl:px-0">
-        <h1
-          className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
-          style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
-        >
-          <Balancer>Building blocks for your Next project</Balancer>
-        </h1>
-        <p
-          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-xl"
-          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-        >
-          <Balancer>
-            An opinionated collection of components, hooks, and utilities for
-            your Next.js project.
-          </Balancer>
-        </p>
-        <ComponentGrid />
+      <div className="z-10 grid w-full max-w-xl gap-8 px-5 xl:px-0">
+        <Skeleton />
+        <Skeleton type="fullwidth" />
+        <Skeleton type="header" />
+        <Skeleton type="subheader" />
+        <Skeleton type="paragraph" />
+        <Skeleton type="paragraph-s" />
+
+        <div className=" h-20 w-40">
+          <Skeleton />
+        </div>
+        <div className="h-40 w-20">
+          <Skeleton />
+        </div>
+        <div className="h-[500px] w-[500px]">
+          <Skeleton />
+        </div>
       </div>
     </>
   );

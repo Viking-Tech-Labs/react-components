@@ -1,0 +1,65 @@
+.skeleton-container {
+  --background: #cad4ea;
+  --shimmer: #e2e7fd;
+
+  // min-height should be equal to the smallest text size in the probject
+  min-height: 0.75rem;
+  max-height: 32rem;
+
+  background-color: var(--background);
+  border-radius: 15px;
+
+  &.container-type-header {
+    width: 15rem;
+    height: 1.5rem;
+  }
+
+  &.container-type-subheader {
+    width: 12rem;
+    height: 1rem;
+  }
+
+  &.container-type-paragraph {
+    width: 8rem;
+  }
+
+  &.container-type-paragraph-s {
+    width: 4rem;
+  }
+
+  &.container-type-fullwidth {
+    width: 100%;
+  }
+
+  &.container-type-expand {
+    width: 100%;
+    height: 100%;
+    max-height: unset;
+  }
+}
+
+@keyframes placeholderShimmer {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+
+.animated-background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeholderShimmer;
+  animation-timing-function: linear;
+  background: darkgrey;
+  background: linear-gradient(
+    80deg,
+    var(--background, #eeeeee) 0% 10%,
+    var(--shimmer, #dddddd) 20% 30%,
+    var(--background, #eeeeee) 40% 50%
+  );
+  background-size: 300% 100%;
+  position: relative;
+}
