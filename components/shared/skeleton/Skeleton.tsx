@@ -10,14 +10,17 @@ type SkeletonType =
 
 type SkeletonProps = {
   type?: SkeletonType;
+  disableMargins?: boolean;
 };
 
 export const Skeleton = (props: SkeletonProps): JSX.Element => {
-  const { type = "expand" } = props;
+  const { type = "expand", disableMargins = false } = props;
 
   return (
     <div
-      className={`skeleton-container animated-background container-type-${type}`}
+      className={`skeleton-container animated-background container-type-${type} ${
+        disableMargins ? "disableMargins" : ""
+      }`}
     />
   );
 };

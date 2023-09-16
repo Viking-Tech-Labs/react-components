@@ -12,29 +12,38 @@
   &.container-type-header {
     width: 15rem;
     height: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   &.container-type-subheader {
     width: 12rem;
     height: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   &.container-type-paragraph {
     width: 8rem;
+    margin-bottom: 0.5rem;
   }
 
   &.container-type-paragraph-s {
     width: 4rem;
+    margin-bottom: 0.5rem;
   }
 
   &.container-type-fullwidth {
     width: 100%;
+    margin-bottom: 0.5rem;
   }
 
   &.container-type-expand {
     width: 100%;
     height: 100%;
     max-height: unset;
+  }
+
+  &.disableMargins {
+    margin: unset;
   }
 }
 
